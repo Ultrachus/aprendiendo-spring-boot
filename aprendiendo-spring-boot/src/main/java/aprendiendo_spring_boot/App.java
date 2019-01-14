@@ -1,4 +1,4 @@
-package com.jgomez.cursos.aprendiendo_spring_boot;
+package aprendiendo_spring_boot;
 
 import java.util.Arrays;
 

@@ -15,6 +15,12 @@ public class SaludosHumanosController {
 	@Value("${proyecto.titulo}")
 	private String titulo;
 
+	private static final String SALTO_DE_LINEA_BR = "<br>";
+
+	// Si marco el atributo como final ya no puedo inicializarlo con un autowired en
+	// la declaración del atributo, entonces debo usar el autowired en el
+	// constructor de la clase que recibe los bean para inicializar los atributos de
+	// la clase
 	private final BusinessService businessService;
 
 	@Autowired
@@ -27,10 +33,10 @@ public class SaludosHumanosController {
 
 		StringBuilder sb = new StringBuilder();
 		sb.append(titulo);
-		sb.append("<br>");
+		sb.append(SALTO_DE_LINEA_BR);
 		sb.append("este título viene del controlador");
-		sb.append("<br>");
-		sb.append("<br>");
+		sb.append(SALTO_DE_LINEA_BR);
+		sb.append(SALTO_DE_LINEA_BR);
 		sb.append(businessService.getTituloService());
 
 		return sb.toString();
