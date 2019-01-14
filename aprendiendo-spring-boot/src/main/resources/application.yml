@@ -1,8 +1,18 @@
+#Configuración básica del servidor
 server:
   port: 8080
   servlet:
     context-path: /aprendiendoSpringBoot
 
+#Configuración básica de logs
+logging:  level:
+    ROOT: ERROR
+    org.springframework.web: ERROR
+    aprendiendo_spring_boot: DEBUG 
+  pattern:    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"  file: C:\Users\jgomez\Desktop\ProyectosCursos\logs\aprendiendo-spring-boot.log
+
+#Textos
 proyecto:
   titulo: Aprendiendo Spring Boot
   tituloService: Servicio Spring Boot
