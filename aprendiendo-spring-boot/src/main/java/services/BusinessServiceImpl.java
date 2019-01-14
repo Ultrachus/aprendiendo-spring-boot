@@ -3,6 +3,7 @@ package services;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import constants.Constants;
 import services.impl.BusinessService;
 
 @Service
@@ -15,7 +16,7 @@ public class BusinessServiceImpl implements BusinessService {
 	public String getTituloService() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(tituloService);
-		sb.append("<br>");
+		sb.append(Constants.SALTO_DE_LINEA);
 		sb.append("este título viene del servicio");
 
 		return sb.toString();
