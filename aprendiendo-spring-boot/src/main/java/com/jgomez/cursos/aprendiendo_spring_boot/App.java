@@ -11,8 +11,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
+//Anotación principal de spring boot que inicializa el proyecto
 @SpringBootApplication
-@ComponentScan({ "controllers" })
+//Anotación que indica a Spring que paquetes debe escanear en busca de otros beans
+@ComponentScan({ "controllers", "services" })
 public class App {
 
 	private static final Logger log = LoggerFactory.getLogger(App.class);
